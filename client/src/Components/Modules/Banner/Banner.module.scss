@@ -1,0 +1,28 @@
+.homeContainer {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+a {
+    color: #85144b;
+}
+
+.banner {
+    color: #fff;
+    background: #85144b;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    font-family: "Karla", sans-serif;
+}
+
+.logoFont {
+    font-family: titillium web, sans-serif;
+}
+
+.testClass {
+    font-size: small;
+}

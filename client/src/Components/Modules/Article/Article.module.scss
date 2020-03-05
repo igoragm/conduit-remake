@@ -1,0 +1,111 @@
+.articlePreview {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 0;
+}
+
+.pullXsRight {
+    float: right !important;
+}
+
+.date {
+    color: #bbb;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.author {
+    display: block;
+    font-weight: 500 !important;
+}
+
+.info {
+    margin: 0 1.5rem 0 0.3rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1rem;
+}
+
+.articlePreviewH1 {
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 3px;
+}
+
+.previewLink {
+    color: inherit !important;
+}
+
+.articleMeta {
+    margin: 0 0 1rem;
+    display: block;
+    position: relative;
+    font-weight: 300;
+}
+
+.articleMetaImg {
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+    width: 32px;
+    border-radius: 30px;
+}
+
+.articlePreview {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.ionHeart {
+    font-family: "Ionicons";
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+
+    &:before {
+        content: "\f141";
+    }
+}
+
+.tagList {
+    padding-left: 0 !important;
+    display: inline-block;
+    list-style: none !important;
+    float: right;
+}
+
+.tag {
+    border: 1px solid #ddd;
+    color: #aaa !important;
+    background: 0 0 !important;
+    font-size: 0.8rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    white-space: nowrap;
+    margin-right: 3px;
+    margin-bottom: 0.2rem;
+    display: inline-block;
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: 10rem;
+}
+
+.tagBtn {
+    border: 1px solid transparent;
+    font: inherit;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.2rem;
+    color: #5cb85c;
+    background-image: none;
+    background-color: transparent;
+    border-color: #5cb85c;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}

@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Articles Test Suite Article snapshot renders 1`] = `
+<div
+  class="articlePreview"
+  id="article-item"
+>
+  <div
+    class="articleMeta"
+  >
+    <a
+      href="/@john smith"
+    >
+      <img
+        alt="john smith"
+        class="articleMetaImg"
+        src="mock image"
+      />
+    </a>
+    <div
+      class="info"
+    >
+      <a
+        class="author"
+        href="/@john smith"
+        id="author"
+      >
+        john smith
+      </a>
+      <span
+        class="date"
+        id="createdAt"
+      >
+        Wed Jan 01 2020
+      </span>
+    </div>
+    <div
+      class="pullXsRight"
+    >
+      <button
+        class="tagBtn"
+        id="favoritesCount"
+      >
+        <i
+          class="ionHeart"
+        />
+         77
+      </button>
+    </div>
+  </div>
+  <a
+    class="previewLink"
+    href="/article/mock slug"
+  >
+    <h1
+      class="articlePreviewH1"
+      id="articleTitle"
+    >
+      this is a story
+    </h1>
+    <p
+      id="articleDescription"
+    >
+      mock description
+    </p>
+    <span>
+      Read more...
+    </span>
+    <ul
+      class="tagList"
+      id="tags-list"
+    >
+      <li
+        class="tag"
+        id="articleTag_mock tagList"
+      >
+        mock tagList
+      </li>
+    </ul>
+  </a>
+</div>
+`;

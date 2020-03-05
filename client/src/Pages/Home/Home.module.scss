@@ -1,0 +1,46 @@
+// .homeContainer {
+//     position: relative;
+//     min-height: 1px;
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     flex: 0 0 75%;
+//     max-width: 75%;
+// }
+
+// .globalFeedOutline {
+//     padding-left: 0;
+//     margin-bottom: 0;
+//     list-style: none;
+//     background-color: #f3f3f3;
+
+//     display: block;
+//     padding: 0.5em 1em;
+//     border-radius: 0.25rem;
+// }
+
+a {
+    color: #85144b;
+}
+
+// .banner {
+//     color: #fff;
+//     background: #85144b;
+//     padding: 2rem;
+//     margin-bottom: 2rem;
+//     font-family: "Karla", sans-serif;
+// }
+
+.splitscreen {
+    display: flex;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 75px;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    flex: 3;
+}
