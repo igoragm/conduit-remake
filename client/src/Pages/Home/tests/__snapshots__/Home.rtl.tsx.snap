@@ -10,6 +10,7 @@ Object {
       >
         <h1
           class="logoFont"
+          data-testid="app-banner"
           id="banner"
         >
           conduit app remake
@@ -20,6 +21,7 @@ Object {
       </div>
       <div
         class="splitscreen"
+        data-testid="home"
       >
         <div
           class="homeContainer"
@@ -131,6 +133,7 @@ Object {
     >
       <h1
         class="logoFont"
+        data-testid="app-banner"
         id="banner"
       >
         conduit app remake
@@ -141,6 +144,7 @@ Object {
     </div>
     <div
       class="splitscreen"
+      data-testid="home"
     >
       <div
         class="homeContainer"

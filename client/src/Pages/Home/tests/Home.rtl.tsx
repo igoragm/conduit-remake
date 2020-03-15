@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
+import { getByTestId, getByText } from "@testing-library/dom";
 import "@testing-library/jest-dom/extend-expect";
 
 import { Home } from "../Home";
@@ -19,8 +20,17 @@ describe("<Home />", () => {
 
         const homeContainer = render(<Home {...props} />);
 
-        expect(homeContainer).toMatchSnapshot();
+        expect(getByTestId(document.body, "home")).toBeInTheDocument();
 
+        expect(homeContainer).toMatchSnapshot();
+        expect(props.getArticles).toHaveBeenCalled();
+
+        const bannerContainer = getByTestId(document.body, "app-banner").textContent;
+
+        console.log(bannerContainer);
+        expect(bannerContainer).toBe("conduit app remake");
+
+        expect(getByText(document.body, "conduit app remake")).toBeInTheDocument();
         expect(document.querySelector("#banner")?.innerHTML).toBe("conduit app remake");
     });
 });

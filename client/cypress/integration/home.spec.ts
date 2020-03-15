@@ -2,21 +2,21 @@
 
 type Url = string;
 const url: Url = "http://localhost:3000/";
+
+beforeEach(() => {
+    cy.visit("/");
+});
+
 it("loads the page", () => {
-    cy.visit(url);
     cy.contains("conduit app remake");
 });
 
 it("loads the articles", () => {
-    cy.visit(url);
-
     const articles = cy.get("#articles-list > #article-item");
     articles.should("have.length", 10);
 });
 
 it("applies the tag filter", () => {
-    cy.visit(url);
-
     const dragonsTag = cy.get("a#dragons");
     dragonsTag.click();
 
@@ -25,10 +25,26 @@ it("applies the tag filter", () => {
 });
 
 it("opens the article details", () => {
-    const articleBody = cy.get("#articleTitle");
-    articleBody.click();
+    const articleBody = cy.get("#article-body");
 
-    cy.contains("Article page");
+    articleBody
+        .invoke("attr", "href")
+        .then(href => {
+            cy.visit(href.toString());
+        })
+        .then(() => {
+            cy.contains("Article page");
+            const articlePage = cy.get("#article-page");
+            articlePage.click();
+
+            cy.contains("Click me!");
+
+            const clickMeText = cy.get(".popup");
+            clickMeText.click().then(() => {
+                const popupTextClass = cy.get(".popuptext");
+                cy.contains("Popup text...");
+            });
+        });
 });
 
 // cypress instructions

@@ -1,13 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
-import Enzyme, { ShallowWrapper } from "enzyme";
+import Enzyme, { ReactWrapper } from "enzyme";
 import { Home } from "../Home";
+import IHome from "../IHome";
 // disconnected component - great for testing
 
 describe("Home init data", () => {
-    let props: any = {};
     let useEffect: jest.SpyInstance<void, [React.EffectCallback, React.DependencyList?]>;
-    let wrapper: ShallowWrapper<typeof Home>;
 
     const mockUseEffect = () => {
         useEffect.mockImplementationOnce(f => f());
@@ -15,14 +14,21 @@ describe("Home init data", () => {
     it("calls getArticles", () => {
         useEffect = jest.spyOn(React, "useEffect").mockImplementation(f => f());
 
-        props = {
+        const props: IHome = {
             getArticles: jest.fn(),
             articles: {
                 articleListReducer: {}
-            }
+            },
+            onClickTag: jest.fn(),
+            loading: false,
+            onClickTagByPage: jest.fn()
         };
 
-        wrapper = Enzyme.shallow(<Home {...props} />);
+        const wrapper: ReactWrapper<typeof Home> = Enzyme.mount(<Home {...props} />);
+        const bannerContainer = wrapper.find("[data-testid='app-banner']").text();
+
+        console.log(bannerContainer);
+        expect(bannerContainer).toBe("conduit app remake");
         expect(props.getArticles).toHaveBeenCalled();
     });
 });

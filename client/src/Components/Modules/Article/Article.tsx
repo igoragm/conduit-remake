@@ -17,7 +17,7 @@ const Article: FC<IArticle> = (props: IArticle) => {
     };
 
     return (
-        <div id="article-item" className={styles.articlePreview}>
+        <div data-testid="rtl-article-id" id="article-item" className={styles.articlePreview}>
             <div className={styles.articleMeta}>
                 <Link to={`/@${article.author.username}`}>
                     <img
@@ -43,7 +43,7 @@ const Article: FC<IArticle> = (props: IArticle) => {
                 </div>
             </div>
 
-            <Link to={`/article/${article.slug}`} className={styles.previewLink}>
+            <Link id="article-body" target="_blank" to={`/article/${article.slug}`} className={styles.previewLink}>
                 <h1 className={styles.articlePreviewH1} id="articleTitle">
                     {article.title}
                 </h1>

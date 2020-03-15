@@ -52,9 +52,11 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "test:puppeteer": "jest --config ./jest.puppeteer.config.js",
+        "test": "react-scripts test",
+        "test:rtl": "jest",
+        "test:pt": "jest --config ./jest.puppeteer.config.js",
+        "cy:open": "cypress open",
         "cy:run": "cypress run",
         "cy:compile": "tsc --project ./src/Pages/Home/tests/cypress/tsconfig.json"
     },
@@ -80,7 +82,7 @@
         "@testing-library/react-hooks": "^3.2.1",
         "@types/enzyme": "^3.10.4",
         "@types/enzyme-adapter-react-16": "^1.0.6",
-        "@types/jest": "^25.1.3",
+        "@types/jest": "^25.1.4",
         "@types/puppeteer": "^2.0.0",
         "@types/react-router-dom": "^5.1.3",
         "@types/redux-mock-store": "^1.0.2",
