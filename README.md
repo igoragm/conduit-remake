@@ -1,3 +1,3 @@
 # conduit-remake
 
-This project is for learning purposes :)
+This project is for learning purposes.
